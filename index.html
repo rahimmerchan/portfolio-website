@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+  </head>
+  <body>
+    <nav id="desktop-nav">
+      <div class="logo">Rahim Merchant</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#main-project">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+    <nav id="hamburger-nav">
+      <div class="logo">Rahim Merchant</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#main-project" onclick="toggleMenu()">Projects</a></li> <!-- Updated this line -->
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+    <!-- Profile Section -->
+<section id="profile" class="gradient-section">
+  <div class="section-content">
+    <div class="profile-container">
+      <div class="section__pic-container">
+        <img src="./assets/Rahim-profile-pic.jpeg" class="rounded-img" alt="Rahim Merchant profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Rahim Merchant</h1>
+        <p class="section__text__p2">An Aspiring Product Manager and Venture Capitalist</p>
+        <div class="btn-container">
+          <button class="btn btn-color-2" onclick="window.open('./assets/Rahim-Resume.pdf')">
+            Download CV
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="My LinkedIn profile" class="icon" onclick="location.href='https://www.linkedin.com/in/rahim-merchant-60673920a/'" />
+          <img src="./assets/github.png" alt="My Github profile" class="icon" onclick="location.href='https://github.com/rahimmerchan'" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- About Section -->
+<section id="about" class="about-section gradient-section">
+  <div class="section-content">
+    <div class="about-container">
+      <div class="about-image">
+        <img src="./assets/velocity.png" alt="Rahim Merchant presenting at Velocity" class="rounded-img" />
+      </div>
+      <div class="about-content">
+        <h1>About Me</h1>
+        <p>
+          I'm Rahim Merchant, a University of Waterloo student majoring in Computer Science and Finance. With a passion for both technology and business, I am actively seeking summer 2025 internships in Product Management or Venture Capital.
+        </p>
+        <p>
+          My journey has been driven by a love for solving complex problems and understanding business models. From enhancing user experience as a frontend developer at ProNavigator to analyzing real estate data for the Government of Canada, I've honed my ability to transform data into actionable insights.
+        </p>
+        <p>
+          I've also contributed to non-profits, applying data analytics to drive strategic decisions. Now, at the Alcohol and Gaming Commission of Ontario, I'm leveraging my skills to develop data-driven solutions that influence regulatory decision-making.
+        </p>
+        <p>
+          Currently, I'm building a video analytics platform for hotels, integrating with existing camera systems to provide real-time alerts and insights on crowding, queue management, and security issues. This platform helps hotels optimize staffing, improve operational efficiency, and deliver personalized services.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Experience Section -->
+<section id="experience" class="experience-section gradient-section">
+  <div class="section-content">
+    <h2 class="section-title">Where I've Worked</h2>
+    <p class="section-subtitle">Here's a list of the companies I have worked for:</p>
+    
+    <div class="experience-grid">
+      <div class="experience-item">
+        <img src="/assets/Alcohol-and-Gaming-Commission-of-Ontario.jpg" alt="AGCO Logo" class="company-logo">
+        <h3 class="experience-date">Sept 2024 - Dec 2024</h3>
+        <h4 class="experience-company">Alcohol and Gaming Commission of Ontario</h4>
+        <p class="experience-description"><strong>Title:</strong> Incoming Data Science and Analytics Intern</p>
+        <p class="experience-description"><strong>Organization:</strong> AGCO regulates Ontario's alcohol, gaming, horse racing, and cannabis retail sectors.</p>
+        <p class="experience-description"><strong>My Role:</strong> Leveraged Python and SQL for analytics, built Power BI dashboards to visualize KPIs and trends for internal stakeholders.</p>
+      </div>
+
+      <div class="experience-item">
+        <img src="/assets/aga-khan-foundation.png" alt="Aga Khan Foundation Logo" class="company-logo">
+        <h3 class="experience-date">March 2024 – May 2024</h3>
+        <h4 class="experience-company">Aga Khan Foundation</h4>
+        <p class="experience-description"><strong>Title:</strong> Data Analyst (Contract Part Time)</p>
+        <p class="experience-description"><strong>Organization:</strong> AKF is an international development organization working in Asia and Africa.</p>
+        <p class="experience-description"><strong>My Role:</strong> Developed Power BI dashboards for fundraising insights, used Pandas and Numpy for data analysis to enhance campaign performance.</p>
+      </div>
+
+      <div class="experience-item">
+        <img src="/assets/government_of_canada_logo.jpeg" alt="Government of Canada Logo" class="company-logo">
+        <h3 class="experience-date">Jan 2024 – April 2024</h3>
+        <h4 class="experience-company">Environment and Climate Change Canada</h4>
+        <p class="experience-description"><strong>Title:</strong> Data Analyst Intern</p>
+        <p class="experience-description"><strong>Organization:</strong> ECCC is the government department responsible for environmental policies and programs.</p>
+        <p class="experience-description"><strong>My Role:</strong> Engineered Power BI dashboards using DAX and Power Query, developed ETL scripts for data integration from Microsoft Azure.</p>
+      </div>
+
+      <div class="experience-item">
+        <img src="/assets/pronavigator_logo.jpeg" alt="ProNavigator Logo" class="company-logo">
+        <h3 class="experience-date">July 2023 – August 2023</h3>
+        <h4 class="experience-company">ProNavigator</h4>
+        <p class="experience-description"><strong>Title:</strong> Front-End Developer Intern</p>
+        <p class="experience-description"><strong>Organization:</strong> ProNavigator provides AI-powered solutions for the insurance industry.</p>
+        <p class="experience-description"><strong>My Role:</strong> Designed user interfaces using React and Material UI, integrated frontend and backend systems using API endpoints.</p>
+      </div>
+    </div>
+  </div>
+</section>
+ <!-- Main-Project -->
+<section id="main-project" class="gradient-section">
+  <div class="section-content">
+    <h2 class="section-title">My Startup Journey</h2>
+    <p class="section-subtitle">I've been working on an exciting startup project over the last couple of months.</p>
+
+    <div class="project-container">
+      <div class="project-header text-center">
+        <h3>InnSight: Video Analytics for Hotels</h3>
+        <p>A cutting-edge solution connecting to existing camera systems to enhance hotel operations and security.</p>
+      </div>
+
+      <div class="project-details">
+        <div class="project-description">
+          <h4>What We Do</h4>
+          <ul>
+            <li>Alert hotels to major operational and security issues</li>
+            <li>Detect crowding and manage queues efficiently</li>
+            <li>Identify security threats like violence or weapons</li>
+            <li>Provide real-time analytics on guest flow and popular areas</li>
+            <li>Help hotels optimize staffing and personalize services</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="project-images text-center">
+        <img src="/assets/velcoity-dashboard.png" alt="InnSight Dashboard" class="project-img" />
+        <img src="/assets/velocity-secuirty.png" alt="InnSight Security Features" class="project-img" />
+      </div>
+
+      <div class="project-achievements">
+        <h4>Achievements</h4>
+        <ul>
+          <li>Top 8 in Waterloo Velocity $5k Pitch Competition</li>
+          <li>Confirmed pilot with Glo Best Western Mississuaga</li>
+        </ul>
+      </div>
+
+      <div class="pitch-videos text-center">
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/WwYEWaGBqJ0?start=4020&end=4440" title="Semi-Finals Pitch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Semi-Finals Pitch</p>
+          <p>Timestamp: 1:07:00 - 1:15:00</p>
+        </div>
+        <div class="video-container">
+          <iframe src="https://www.youtube.com/embed/puuJjbisUAw?start=730&end=1220" title="Finals Pitch" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <p>Finals Pitch</p>
+          <p>Timestamp: 12:00 - 20:20</p>
+        </div>
+      </div>
+      <div class="project-gallery text-center">
+        <h4>Gallery</h4>
+        <a href="/assets/InnSight Velocity Deck-website.pdf" class="btn btn-color-1" target="_blank">View Pitch Deck</a>
+        <div class="gallery-images">
+          <img src="/assets/velocity.png" alt="Presenting at Velocity" />
+          <img src="/assets/velocity-image.jpg" alt="Velocity Incubator" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Data Project -->
+<section id="data-science-projects" class="projects-section gradient-section">
+  <div class="section-content">
+    <h2 class="section-title">Data Science Projects</h2>
+    <div class="projects-grid">
+      
+      <!-- Project 1: Robo-Advisor -->
+      <div class="project-card">
+        <img src="./assets/stockmarket.jpg" alt="Robo-Advisor Project" class="project-img">
+        <h3>Robo-Advisor</h3>
+        <p>
+          In theory, financial securities such as oil companies and airline companies should be inversely related. However, financial securities are increasingly correlated. This project dynamically identifies stocks and allocations that create a portfolio unphased by market movements.
+        </p>
+        <a href="https://github.com/rahimmerchan/python-roboadvisor" class="project-link" target="_blank">View Project ↗</a>
+      </div>
+      
+      <!-- Project 2: Startup Investor Recommendation -->
+      <div class="project-card">
+        <img src="./assets/venturecapital-stock.jpg" alt="Startup Investor Recommendation" class="project-img">
+        <h3>Startup Investor Recommendation</h3>
+        <p>
+          Developed a recommendation system to aid VCs in finding suitable startups. This project includes data preprocessing, visualization, and personalized recommendations using collaborative filtering and cosine similarity.
+        </p>
+        <a href="https://github.com/rahimmerchan/Investor-Reccomendation-System" class="project-link" target="_blank">View Project ↗</a>
+      </div>
+      
+      <!-- Project 3: NBA Points Predictor -->
+      <div class="project-card">
+        <img src="./assets/nba-logo.jpg" alt="NBA Points Predictor" class="project-img">
+        <h3>NBA Points Predictor</h3>
+        <p>
+          Utilized BS4 for web scraping NBA player and team data. Implemented ridge regression to predict points and improved mean squared error through feature engineering, and visualized results with Power BI.
+        </p>
+        <a href="https://github.com/rahimmerchan/Points-Predictor-NBA" class="project-link" target="_blank">View Project ↗</a>
+      </div>
+    
+    </div>
+  </div>
+</section>
+<!-- Contact -->
+  <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img
+            src="./assets/email.png"
+            alt="Email icon"
+            class="icon contact-icon email-icon"
+          />
+          <p><a href="mailto:r3mercha@uwaterloo.ca">r3mercha@uwaterloo.ca</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img
+            src="./assets/linkedin.png"
+            alt="LinkedIn icon"
+            class="icon contact-icon"
+          />
+          <p><a href="https://www.linkedin.com/in/rahim-merchant-60673920a/">LinkedIn</a></p>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <nav>
+        <nav id="desktop-nav">
+          <div>
+            <ul class="nav-links">
+              <li><a href="#about">About</a></li>
+              <li><a href="#experience">Experience</a></li>
+              <li><a href="#main-project">Projects</a></li>
+              <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+        </nav>
+      </nav>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
