@@ -908,75 +908,74 @@ section {
 
 /* PROJECTS SECTION */
 
-/* Base styles for the Projects Section */
 .projects-section {
-  padding: 4rem 2rem; /* Adequate padding for readability */
-  background: linear-gradient(135deg, #f9f9f9, #f3f3f3); /* Subtle gradient background */
-  border-radius: 2rem; /* Rounded corners */
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
-  margin-bottom: 8rem; /* Space below section */
+  padding: 4rem 2rem; 
+  background: linear-gradient(135deg, #f9f9f9, #f3f3f3); 
+  border-radius: 2rem; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); 
+  margin-bottom: 8rem; 
 }
 
 .section-title {
-  text-align: center; /* Center the section title */
-  font-size: 2.5rem; /* Large, readable text */
-  margin-bottom: 3rem; /* Space after the title */
-  color: #333; /* Dark grey color for contrast */
+  text-align: center; 
+  font-size: 2.5rem; 
+  margin-bottom: 3rem; 
+  color: #333; 
 }
 
 .projects-grid {
-  display: flex; /* Flexbox for layout */
-  justify-content: center; /* Center items horizontally */
-  gap: 2rem; /* Space between project cards */
-  flex-wrap: wrap; /* Allow wrapping of cards */
+  display: flex; 
+  justify-content: center; 
+  gap: 2rem; 
+  flex-wrap: wrap; 
 }
 
 .project-card {
-  flex: 1; /* Flex grow to fill available space */
-  min-width: 250px; /* Minimum width of cards */
-  max-width: calc(33.333% - 2rem); /* Maximum width calculated for 3 columns layout */
-  background: white; /* White background for cards */
-  border-radius: 1rem; /* Rounded corners for cards */
-  padding: 1.5rem; /* Padding inside cards */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
-  text-align: center; /* Center text and content in cards */
+  flex: 1; 
+  min-width: 250px; 
+  max-width: calc(33.333% - 2rem); 
+  background: white; 
+  border-radius: 1rem; 
+  padding: 1.5rem; 
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); 
+  text-align: center;
 }
 
 .project-img {
-  width: 100%; /* Full width images */
-  height: 150px; /* Fixed height for images */
-  object-fit: cover; /* Cover fit for images */
-  border-radius: 0.5rem; /* Rounded corners for images */
-  margin-bottom: 1.5rem; /* Space below images */
+  width: 100%; 
+  height: 150px; 
+  object-fit: cover; 
+  border-radius: 0.5rem; 
+  margin-bottom: 1.5rem; 
 }
 
 .project-card h3 {
-  font-size: 1.3rem; /* Font size for project titles */
-  color: #333; /* Dark grey for readability */
-  margin-bottom: 1rem; /* Space below the title */
+  font-size: 1.3rem; 
+  color: #333; 
+  margin-bottom: 1rem; 
 }
 
 .project-card p {
-  font-size: 0.9rem; /* Smaller font size for descriptions */
-  color: #666; /* Lighter grey for descriptions */
-  line-height: 1.6; /* Line height for better readability */
-  margin-bottom: 1.5rem; /* Space at the bottom of text */
-  flex-grow: 1; /* Allow text to expand and fill space */
+  font-size: 0.9rem; 
+  color: #666;
+  line-height: 1.6; 
+  margin-bottom: 1.5rem; 
+  flex-grow: 1; 
 }
 
 .project-link {
-  font-size: 1rem; /* Font size for links */
-  color: #333; /* Matching dark grey color */
-  text-decoration: none; /* No underline to start */
-  font-weight: 600; /* Bolder font for emphasis */
-  align-self: flex-start; /* Align links to the start */
+  font-size: 1rem; 
+  color: #333; 
+  text-decoration: none; 
+  font-weight: 600;
+  align-self: flex-start; 
 }
 
 .project-link:hover {
-  text-decoration: underline; /* Underline on hover for emphasis */
+  text-decoration: underline; 
 }
 
-@media only screen and (max-width: 960px) {  /* Adjust this value based on the exact width where overflow occurs at 125% zoom */
+@media only screen and (max-width: 960px) {  
   .projects-grid {
     display: flex;
     flex-direction: column;
@@ -984,13 +983,13 @@ section {
   }
 
   .project-card {
-    width: 100%;  /* Make each card take full container width */
-    max-width: 500px;  /* Optional: limit max width to keep the design tidy */
-    margin-bottom: 20px;  /* Space between cards */
+    width: 100%; 
+    max-width: 500px;  
+    margin-bottom: 20px; 
   }
 }
 
-@media only screen and (max-width: 1200px) {  /* You may need to adjust this breakpoint */
+@media only screen and (max-width: 1200px) {  
   .projects-grid {
     display: flex;
     flex-direction: column;
@@ -998,26 +997,25 @@ section {
   }
 
   .project-card {
-    width: 100%;  /* Ensures cards take full container width */
-    max-width: 100%;  /* Removes max-width constraints */
-    margin-bottom: 20px;  /* Adds space between cards */
+    width: 100%;  
+    max-width: 100%; 
+    margin-bottom: 20px;  
   }
 }
 
 
-/* Responsive Adjustments for 125% Zoom */
 @media only screen and (max-width: 1440px) {
   .projects-section {
-    padding: 3rem 1.5rem; /* Reduced padding */
+    padding: 3rem 1.5rem; 
   }
 
   .project-card {
-    padding: 1rem; /* Reduced padding inside cards */
-    max-width: calc(50% - 2rem); /* Wider cards for better fit */
+    padding: 1rem; 
+    max-width: calc(50% - 2rem); 
   }
 
   .section-title {
-    font-size: 2rem; /* Smaller title for less space */
+    font-size: 2rem; 
   }
 }
 
@@ -1027,7 +1025,7 @@ section {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  min-height: 70vh; /* Changed from fixed height to min-height */
+  min-height: 70vh; 
   background: linear-gradient(135deg, #f9f9f9, #f3f3f3);
   padding: 4rem 2rem; 
   margin-bottom: 4rem;
@@ -1044,7 +1042,7 @@ section {
   background: #fafafa; 
   margin: 2rem auto;
   padding: 0.5rem;
-  flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  flex-wrap: wrap; 
 }
 
 .contact-info-container {
@@ -1056,8 +1054,8 @@ section {
 }
 
 .contact-info-container p {
-  font-size: 1rem; /* Reduced font size for better fit */
-  word-break: break-word; /* Allow long email addresses to wrap */
+  font-size: 1rem; 
+  word-break: break-word; 
 }
 
 .contact-icon {
