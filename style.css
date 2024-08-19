@@ -194,76 +194,55 @@ a:hover {
 
 /* About section styles */
 .about-section {
-  padding: 4rem 2rem;
+  padding: 4rem 1rem;
+  margin-bottom: 4rem;
+  border-radius: 2rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
 .about-container {
   display: flex;
-  gap: 4rem;
-  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 2rem;
+  max-width: 100%;
 }
 
 .about-image {
   flex: 1;
   max-width: 400px;
+  min-width: 200px;
   border-radius: 1rem;
   overflow: hidden;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
 }
 
+.about-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
 .about-content {
   flex: 2;
+  min-width: 300px;
+  text-align: left;
+  max-width: 100%;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .about-content h1 {
-  font-size: 3rem;
+  font-size: 2.5rem;
   margin-bottom: 1.5rem;
   position: relative;
 }
 
-.about-content h1::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: -10px;
-  width: 50px;
-  height: 3px;
-  background-color: #333;
-}
-
 .about-content p {
-  font-size: 1.25rem; 
-  line-height: 1.8;
+  font-size: 1rem;
+  line-height: 1.6;
   color: #555;
   margin-bottom: 1.5rem;
 }
-
-@media (max-width: 968px) {
-  .gradient-section {
-    padding: 3rem 1rem;
-  }
-
-  .profile-container,
-  .about-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section__pic-container,
-  .about-image {
-    margin-bottom: 2rem;
-  }
-
-  .about-image {
-    max-width: 100%;
-  }
-
-  .about-content h1::after {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-}
-
 /* HAMBURGER MENU */
 
 #hamburger-nav {
@@ -360,50 +339,133 @@ section {
 
 /* PROFILE SECTION */
 
+/* HOME SECTION - PROFILE */
 #profile {
+  min-height: 100vh;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 5rem;
-  height: 80vh;
+  padding: 1rem;
+  overflow-x: hidden;
+}
+
+.profile-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  width: 100%;
+  max-width: 100vw;
 }
 
 .section__pic-container {
-  display: flex;
-  height: 400px;
-  width: 400px;
-  margin: auto 0;
+  width: 30vw;
+  height: 30vw;
+  max-width: 200px;
+  max-height: 200px;
+  min-width: 100px;
+  min-height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.rounded-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .section__text {
-  align-self: center;
+  width: 100%;
+  max-width: 600px;
   text-align: center;
-}
-
-.section__text p {
-  font-weight: 600;
 }
 
 .section__text__p1 {
-  text-align: center;
-}
-
-.section__text__p2 {
-  font-size: 1.75rem;
-  margin-bottom: 1rem;
+  font-size: clamp(0.8rem, 3vw, 1.25rem);
+  color: #666;
+  margin-bottom: 0.5rem;
 }
 
 .title {
-  font-size: 3rem;
-  text-align: center;
+  font-size: clamp(1.5rem, 5vw, 3rem);
+  color: #222;
+  margin-bottom: 0.5rem;
+  word-wrap: break-word;
+}
+
+.section__text__p2 {
+  font-size: clamp(1rem, 3vw, 1.5rem);
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.btn {
+  padding: 0.5rem 1rem;
+  border-radius: 2rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  font-size: clamp(0.7rem, 2vw, 1rem);
+  white-space: nowrap;
 }
 
 #socials-container {
   display: flex;
   justify-content: center;
-  margin-top: 1rem;
   gap: 1rem;
 }
 
+.icon {
+  width: clamp(1.2rem, 5vw, 2rem);
+  height: clamp(1.2rem, 5vw, 2rem);
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) and (max-width: 1200px) {
+  .profile-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  
+  .section__pic-container {
+    margin-right: 2rem;
+  }
+}
+
+@media (max-width: 480px), (min-resolution: 192dpi) {
+  .profile-container {
+    gap: 0.5rem;
+  }
+
+  .section__pic-container {
+    width: 40vw;
+    height: 40vw;
+    max-width: 150px;
+    max-height: 150px;
+  }
+
+  .btn {
+    padding: 0.4rem 0.8rem;
+    font-size: clamp(0.6rem, 2vw, 0.8rem);
+  }
+
+  .icon {
+    width: clamp(1rem, 4vw, 1.5rem);
+    height: clamp(1rem, 4vw, 1.5rem);
+  }
+}
 /* ICONS */
 
 .icon {
@@ -641,6 +703,25 @@ section {
   }
 }
 
+@media (min-resolution: 120dpi) {
+  .about-section {
+    padding: 2rem 0.5rem;
+  }
+
+  .about-container {
+    gap: 1rem;
+  }
+
+  .about-content h1 {
+    font-size: clamp(1.2rem, 2.2vw, 1.8rem);
+  }
+
+  .about-content p {
+    font-size: clamp(0.8rem, 1.5vw, 0.95rem);
+    line-height: 1.4;
+  }
+}
+
 /* MAIN-PROJECTS SECTION */
 #main-project {
   padding: 6rem 2rem;
@@ -827,87 +908,126 @@ section {
 
 /* PROJECTS SECTION */
 
+/* Base styles for the Projects Section */
 .projects-section {
-  padding: 6rem 2rem;
-  background: linear-gradient(135deg, #f9f9f9, #f3f3f3);
-  border-radius: 2rem;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 4rem 2rem; /* Adequate padding for readability */
+  background: linear-gradient(135deg, #f9f9f9, #f3f3f3); /* Subtle gradient background */
+  border-radius: 2rem; /* Rounded corners */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
+  margin-bottom: 8rem; /* Space below section */
 }
 
 .section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 3rem;
-  color: #333;
+  text-align: center; /* Center the section title */
+  font-size: 2.5rem; /* Large, readable text */
+  margin-bottom: 3rem; /* Space after the title */
+  color: #333; /* Dark grey color for contrast */
 }
 
 .projects-grid {
-  display: flex;
-  justify-content: space-between;
-  gap: 2rem;
-  flex-wrap: wrap;
+  display: flex; /* Flexbox for layout */
+  justify-content: center; /* Center items horizontally */
+  gap: 2rem; /* Space between project cards */
+  flex-wrap: wrap; /* Allow wrapping of cards */
 }
 
 .project-card {
-  flex: 1;
-  max-width: 30%;
-  background: white;
-  border-radius: 1rem;
-  padding: 2rem;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  text-align: center;
+  flex: 1; /* Flex grow to fill available space */
+  min-width: 250px; /* Minimum width of cards */
+  max-width: calc(33.333% - 2rem); /* Maximum width calculated for 3 columns layout */
+  background: white; /* White background for cards */
+  border-radius: 1rem; /* Rounded corners for cards */
+  padding: 1.5rem; /* Padding inside cards */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Soft shadow for cards */
+  text-align: center; /* Center text and content in cards */
 }
 
 .project-img {
-  width: 100%;
-  height: 150px;
-  object-fit: cover;
-  border-radius: 0.5rem;
-  margin-bottom: 1.5rem;
+  width: 100%; /* Full width images */
+  height: 150px; /* Fixed height for images */
+  object-fit: cover; /* Cover fit for images */
+  border-radius: 0.5rem; /* Rounded corners for images */
+  margin-bottom: 1.5rem; /* Space below images */
 }
 
 .project-card h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 1rem;
+  font-size: 1.3rem; /* Font size for project titles */
+  color: #333; /* Dark grey for readability */
+  margin-bottom: 1rem; /* Space below the title */
 }
 
 .project-card p {
-  font-size: 1rem;
-  color: #666;
-  line-height: 1.6;
-  margin-bottom: 1.5rem;
+  font-size: 0.9rem; /* Smaller font size for descriptions */
+  color: #666; /* Lighter grey for descriptions */
+  line-height: 1.6; /* Line height for better readability */
+  margin-bottom: 1.5rem; /* Space at the bottom of text */
+  flex-grow: 1; /* Allow text to expand and fill space */
 }
 
 .project-link {
-  font-size: 1rem;
-  color: #333;
-  text-decoration: none;
-  font-weight: 600;
+  font-size: 1rem; /* Font size for links */
+  color: #333; /* Matching dark grey color */
+  text-decoration: none; /* No underline to start */
+  font-weight: 600; /* Bolder font for emphasis */
+  align-self: flex-start; /* Align links to the start */
 }
 
 .project-link:hover {
-  text-decoration: underline;
+  text-decoration: underline; /* Underline on hover for emphasis */
 }
 
-@media (max-width: 768px) {
+@media only screen and (max-width: 960px) {  /* Adjust this value based on the exact width where overflow occurs at 125% zoom */
   .projects-grid {
+    display: flex;
     flex-direction: column;
+    align-items: center;
   }
-  
+
   .project-card {
-    max-width: 100%;
-    margin-bottom: 2rem;
+    width: 100%;  /* Make each card take full container width */
+    max-width: 500px;  /* Optional: limit max width to keep the design tidy */
+    margin-bottom: 20px;  /* Space between cards */
+  }
+}
+
+@media only screen and (max-width: 1200px) {  /* You may need to adjust this breakpoint */
+  .projects-grid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .project-card {
+    width: 100%;  /* Ensures cards take full container width */
+    max-width: 100%;  /* Removes max-width constraints */
+    margin-bottom: 20px;  /* Adds space between cards */
   }
 }
 
 
-/* CONTACT */
+/* Responsive Adjustments for 125% Zoom */
+@media only screen and (max-width: 1440px) {
+  .projects-section {
+    padding: 3rem 1.5rem; /* Reduced padding */
+  }
+
+  .project-card {
+    padding: 1rem; /* Reduced padding inside cards */
+    max-width: calc(50% - 2rem); /* Wider cards for better fit */
+  }
+
+  .section-title {
+    font-size: 2rem; /* Smaller title for less space */
+  }
+}
+
+
+/* CONTACT SECTION */
 #contact {
   display: flex;
   justify-content: center;
   flex-direction: column;
-  height: 70vh;
+  min-height: 70vh; /* Changed from fixed height to min-height */
   background: linear-gradient(135deg, #f9f9f9, #f3f3f3);
   padding: 4rem 2rem; 
   margin-bottom: 4rem;
@@ -924,6 +1044,7 @@ section {
   background: #fafafa; 
   margin: 2rem auto;
   padding: 0.5rem;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .contact-info-container {
@@ -935,7 +1056,8 @@ section {
 }
 
 .contact-info-container p {
-  font-size: larger;
+  font-size: 1rem; /* Reduced font size for better fit */
+  word-break: break-word; /* Allow long email addresses to wrap */
 }
 
 .contact-icon {
@@ -944,6 +1066,12 @@ section {
 
 .email-icon {
   height: 2.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-info-upper-container {
+    flex-direction: column;
+  }
 }
 
 
